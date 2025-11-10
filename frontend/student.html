@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Project Submission System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>👨‍🎓 Student Dashboard</h1>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary">Back to Dashboard</button>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Available Projects -->
+            <section class="section">
+                <h2>Available Projects</h2>
+                <div id="projects-list" class="projects-grid">
+                    <div class="loading">Loading projects...</div>
+                </div>
+            </section>
+
+            <!-- My Submissions -->
+            <section class="section">
+                <h2>My Submissions</h2>
+                <div id="submissions-list" class="submissions-list">
+                    <div class="loading">Loading submissions...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for submission -->
+    <div id="submit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submit Project</h2>
+            <form id="submit-form">
+                <div class="form-group">
+                    <label for="project-link">Project Link (URL or Google Drive Link)</label>
+                    <input type="url" id="project-link" placeholder="https://..." required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/student.js"></script>
+</body>
+</html>
+
+

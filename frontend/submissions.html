@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submissions - Teacher Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>📋 Project Submissions</h1>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <button onclick="goBack()" class="btn btn-secondary">Back to Projects</button>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Project Info -->
+            <section class="section">
+                <div class="project-info-card">
+                    <h2 id="project-title">Loading...</h2>
+                    <p id="project-description"></p>
+                    <div class="project-meta">
+                        <span><strong>Due Date:</strong> <span id="project-due-date"></span></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Submissions Summary -->
+            <section class="section">
+                <div id="submissions-summary" class="submission-summary">
+                    <div class="loading">Loading summary...</div>
+                </div>
+            </section>
+
+            <!-- Submissions List -->
+            <section class="section">
+                <h2>Student Submissions</h2>
+                <div id="submissions-list">
+                    <div class="loading">Loading submissions...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/submissions.js"></script>
+</body>
+</html>
+
